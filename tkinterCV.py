@@ -76,6 +76,19 @@ def SET_cwd():
     # os.getcwd()
     print(askdirectory())
 
+def SET_cwd(q):
+
+    # os.getcwd()
+    cwd = q.askdirectory()
+    os.chdir(cwd)
+    q.RECREATE_im()
+
+def RECREATE_im(q):
+    print os.getcwd()
+    pIms = glob.glob('*.png')
+    print pIms
+    # for pIm in pIms:
+    #     imLabel.grid(row=3, column=2, rowspan=1, columnspan=1, sticky=tk.NSEW )
 def askdirectory():
     """Returns a selected directoryname."""
 
